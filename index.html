@@ -1,168 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sreedeep — Portfolio</title>
-  <meta name="description" content="Portfolio of Sreedeep — web developer / designer / whatever" />
-
-  <!-- Google font (optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Link to separate CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreedeep Reddy | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#home">Sreedeep</a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" id="navToggle">
-        <span class="hamburger"></span>
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Sreedeep Reddy</h1>
+        <p class="role">Web Developer | Hyderabad, Telangana</p>
+        <p class="tagline">I build modern and responsive websites that showcase my skills and projects.</p>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+      <div class="hero-image">
+        <img src="train 2.gif" alt="Sreedeep Reddy">
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="hero container">
-      <div class="hero-content">
-        <h1>Hi — I’m <span class="accent">Sreedeep</span></h1>
-        <p class="lead">I build clean, accessible websites and delightful UI experiences. I specialize in HTML, CSS and modern JavaScript.</p>
-        <p>
-          <a class="btn" href="#projects">See my work</a>
-          <a class="btn outline" href="#contact">Get in touch</a>
-        </p>
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Hello! I am <strong>Sreedeep Reddy</strong> from Hyderabad, Telangana. I am passionate about web development and creating user-friendly, responsive websites. I enjoy turning ideas into interactive projects.</p>
+    <div class="info-cards">
+      <div class="card">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Hyderabad, Telangana</p>
       </div>
-      <div class="hero-image" aria-hidden="true">
-        <!-- Placeholder box / replace with an image -->
-        <div class="avatar">Your<br>Photo</div>
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <p>deeps510813@gmail.com</p>
       </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="container about">
-      <h2>About me</h2>
-      <p>I’m a web developer focused on responsive design, performance and usability. I enjoy turning complex problems into simple, beautiful and intuitive solutions.</p>
-      <ul class="meta">
-        <li><strong>Location:</strong> Hyderabad, India</li>
-        <li><strong>Email:</strong> <a href="mailto:you@example.com">deeps510813@gmail.com</a></li>
-        <li><strong>Available:</strong> Not Available</li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="container projects">
-      <h2>Selected projects</h2>
-      <div class="grid">
-        <!-- Project card 1 -->
-        <article class="card">
-          <div class="card-thumb" role="img" aria-label="Project screenshot">IMG</div>
-          <div class="card-body">
-            <h3>E-Commerce</h3>
-            <p>Short description of the project, the tech used and the outcome.</p>
-            <p class="card-links">
-              <a href="#" target="_blank" rel="noopener">Live</a> ·
-              <a href="#" target="_blank" rel="noopener">Code</a>
-            </p>
-          </div>
-        </article>
-
-        <!-- Project card 2 -->
-        <article class="card">
-          <div class="card-thumb" role="img" aria-label="Project screenshot">IMG</div>
-          <div class="card-body">
-            <h3>Heart Disease Prediction</h3>
-            <p>Short description demonstrating design and performance improvements.</p>
-            <p class="card-links">
-              <a href="#" target="_blank" rel="noopener">Live</a> ·
-              <a href="#" target="_blank" rel="noopener">Code</a>
-            </p>
-          </div>
-        </article>
-
-        <!-- Add more cards as needed -->
+      <div class="card">
+        <i class="fa-solid fa-code"></i>
+        <p>Web Development</p>
       </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="container skills">
-      <h2>Skills</h2>
-      <div class="skill-list">
-        <div class="skill">
-          <strong>Front-end</strong>
-          <span>HTML • CSS • JavaScript • React</span>
-        </div>
-        <div class="skill">
-          <strong>Tools</strong>
-          <span>Git • Webpack • Vite • Lighthouse</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>If you’d like to work together, send a message or email me at <a href="mailto:you@example.com">deeps510813@gmail.com</a>.</p>
-
-      <form class="contact-form" action="#" method="post" onsubmit="alert('This is a demo form — wire up your backend or Netlify forms'); return false;">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required />
-        </label>
-
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required />
-        </label>
-
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-
-        <button class="btn" type="submit">Send message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Name — Built with ❤️ · <a href="#">Resume</a></p>
     </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress">
+          <div class="progress-bar html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress">
+          <div class="progress-bar css"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress-bar js"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Responsive Design</p>
+        <div class="progress">
+          <div class="progress-bar responsive"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern portfolio website built with HTML, CSS, and JS to showcase projects and skills.</p>
+      </div>
+      <div class="project-card">
+        <h3>JavaScript Calculator</h3>
+        <p>A simple calculator built with JS to demonstrate DOM manipulation and logic.</p>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page Design</h3>
+        <p>A responsive landing page with modern UI design and CSS animations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me via email or connect on social media:</p>
+    <div class="contact-links">
+      <a href="mailto:deeps510813@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://github.com/sreedeep123-star" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sreedeep Reddy. All rights reserved.</p>
   </footer>
 
-  <!-- Minimal JS for nav + year -->
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const nav = document.getElementById('primary-nav');
-
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-      navToggle.setAttribute('aria-expanded', !expanded);
-      nav.classList.toggle('open');
-    });
-
-    // close nav on link click (mobile)
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
-  </script>
 </body>
 </html>
