@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sreedeep Reddy | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,17 +16,17 @@
   <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav-inner">
-      <div class="nav-center">
+      <div class="nav-left">
         <a class="brand" href="index.html">Sreedeep Reddy</a>
-        <nav id="primaryNav" class="primary-nav">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="resume.pdf" target="_blank" class="nav-link resume">Resume</a>
-        </nav>
       </div>
-      <div class="nav-actions">
+      <nav id="primaryNav" class="primary-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.pdf" target="_blank" class="nav-link resume">Resume</a>
+      </nav>
+      <div class="nav-right">
         <button id="themeToggle" class="icon-btn">🌙</button>
         <button id="menuToggle" class="icon-btn menu-btn">☰</button>
       </div>
@@ -32,20 +37,20 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-card glass reveal">
-          <h1 class="hero-title">Hi, I’m <span class="accent">Sreedeep Reddy</span></h1>
-          <p class="hero-sub">Frontend Developer • ML Enthusiast — Hyderabad, Telangana</p>
-          <div class="hero-actions">
+        <div class="hero-text glass reveal">
+          <h1>Hi, I’m <span class="accent">Sreedeep Reddy</span></h1>
+          <p class="sub-title">Frontend Developer & ML Enthusiast — Hyderabad, Telangana</p>
+          <div class="hero-buttons">
             <a class="btn" href="#projects">View Projects</a>
             <a class="btn ghost" href="mailto:deeps510813@gmail.com">Contact</a>
           </div>
           <ul class="social-inline">
-            <li><a href="https://github.com/sreedeep123-star" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/sreedeep123-star" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank"><i class="fab fa-linkedin"></i></a></li>
           </ul>
         </div>
         <div class="hero-image glass reveal">
-          <img src="profile.jpg" alt="Sreedeep Reddy">
+          <img src="train 2.gif" alt="Sreedeep Reddy">
         </div>
       </div>
     </section>
@@ -53,21 +58,21 @@
     <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container section-grid">
-        <div class="glass info reveal">
+        <div class="glass about-card reveal">
           <h2>About Me</h2>
-          <p>I build modern, accessible, and responsive websites. I also work on machine learning projects and enjoy turning complex problems into simple, usable interfaces.</p>
+          <p>I build modern, responsive websites with clean UI/UX and also work on ML projects. I enjoy solving problems and turning ideas into interactive experiences.</p>
           <div class="info-list">
-            <div><strong>Location</strong><span>Hyderabad, Telangana</span></div>
-            <div><strong>Email</strong><span>deeps510813@gmail.com</span></div>
-            <div><strong>Role</strong><span>Frontend / ML</span></div>
+            <div><strong>Location:</strong> Hyderabad, Telangana</div>
+            <div><strong>Email:</strong> deeps510813@gmail.com</div>
+            <div><strong>Role:</strong> Frontend / ML</div>
           </div>
         </div>
-        <div class="glass stats reveal">
+        <div class="glass about-stats reveal">
           <h3>Highlights</h3>
           <ul>
-            <li>Heart disease prediction ML app</li>
-            <li>Responsive e-commerce website</li>
-            <li>E-learning prototype with quizzes & tracking</li>
+            <li>❤️ Heart Disease Prediction ML App</li>
+            <li>🛒 Responsive E-Commerce Website</li>
+            <li>📚 E-Learning Platform Prototype</li>
           </ul>
         </div>
       </div>
@@ -101,12 +106,12 @@
           </a>
           <a class="project glass reveal" href="ecommerce.html">
             <h3>🛒 E-Commerce Website</h3>
-            <p>Responsive product pages, cart UX and clean UI templates.</p>
+            <p>Responsive product pages, cart UX, and clean UI templates.</p>
             <span class="pill">HTML • CSS • JS</span>
           </a>
           <a class="project glass reveal" href="elearning.html">
             <h3>📚 E-Learning Platform</h3>
-            <p>Course listing, quizzes and student progress mockups.</p>
+            <p>Course listing, quizzes, and student progress mockups.</p>
             <span class="pill">HTML • CSS • JS</span>
           </a>
         </div>
@@ -129,12 +134,14 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Sreedeep Reddy — Built with care.</p>
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>

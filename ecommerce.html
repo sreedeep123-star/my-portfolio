@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>E-Commerce Website — Sreedeep Reddy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website | Sreedeep Reddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="section">
-    <div class="container">
-      <div class="glass" style="padding:24px; margin-bottom:18px;">
-        <h2>🛒 E-Commerce Website</h2>
-        <p>
-          A responsive e-commerce front end with product listing, product detail, and cart UX.
-          Backend can be plugged in using Django, PHP or Node.js depending on preference.
-        </p>
-
-        <h3>Technologies</h3>
-        <ul>
-          <li>HTML · CSS · JavaScript</li>
-          <li>Optional Backend: Django / Node / PHP</li>
-          <li>Database: MySQL / PostgreSQL</li>
-        </ul>
-
-        <h3>Highlights</h3>
-        <ul>
-          <li>Product catalog with filters</li>
-          <li>Cart flow and checkout design</li>
-          <li>Admin interface for product management</li>
-        </ul>
-
-        <a class="btn" href="index.html">← Back to Home</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a class="brand" href="index.html">Sreedeep Reddy</a>
+      </div>
+      <nav id="primaryNav" class="primary-nav">
+        <a href="index.html">Home</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeToggle" class="icon-btn">🌙</button>
       </div>
     </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="glass reveal" style="padding:30px;">
+          <h1>🛒 E-Commerce Website</h1>
+          <p>A responsive e-commerce website with product pages, cart, and clean UI design. Focused on modern UX and mobile-first approach.</p>
+          <h3>Technologies Used:</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS (Flex/Grid & Glassmorphism)</li>
+            <li>JavaScript</li>
+          </ul>
+          <h3>Screenshots / Demo:</h3>
+          <img src="ecommerce-demo.png" alt="E-Commerce Website" style="max-width:100%;border-radius:10px; margin-top:10px;">
+          <div style="margin-top:20px;">
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sreedeep Reddy</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

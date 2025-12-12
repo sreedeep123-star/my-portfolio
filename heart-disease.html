@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Heart Disease Prediction — Sreedeep Reddy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Prediction | Sreedeep Reddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="section">
-    <div class="container">
-      <div class="glass" style="padding:24px; margin-bottom:18px;">
-        <h2>❤️ Heart Disease Prediction</h2>
-        <p>
-          A machine learning pipeline to predict heart disease risk using clinical features.
-          The project includes data cleaning, feature engineering, model training (Logistic Regression / Random Forest),
-          evaluation and a Streamlit UI to input patient parameters and get an instant prediction.
-        </p>
-
-        <h3>Technologies</h3>
-        <ul>
-          <li>Python · Pandas · NumPy</li>
-          <li>Scikit-learn · Matplotlib</li>
-          <li>Streamlit for deployment</li>
-        </ul>
-
-        <h3>Highlights</h3>
-        <ul>
-          <li>Trained on publicly available heart disease datasets</li>
-          <li>Exploratory data analysis, feature selection & model evaluation</li>
-          <li>Clean Streamlit frontend for quick input & inference</li>
-        </ul>
-
-        <a class="btn" href="index.html">← Back to Home</a>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a class="brand" href="index.html">Sreedeep Reddy</a>
+      </div>
+      <nav id="primaryNav" class="primary-nav">
+        <a href="index.html">Home</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeToggle" class="icon-btn">🌙</button>
       </div>
     </div>
+  </header>
+
+  <!-- PROJECT DETAIL -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="glass reveal" style="padding:30px;">
+          <h1>❤️ Heart Disease Prediction</h1>
+          <p>This project uses machine learning to predict the likelihood of heart disease based on clinical data. The app is built with Python and Streamlit.</p>
+          <h3>Technologies Used:</h3>
+          <ul>
+            <li>Python</li>
+            <li>Scikit-learn</li>
+            <li>Pandas & NumPy</li>
+            <li>Streamlit for UI</li>
+          </ul>
+          <h3>Screenshots / Demo:</h3>
+          <img src="heart-disease-demo.png" alt="Heart Disease App" style="max-width:100%;border-radius:10px; margin-top:10px;">
+          <div style="margin-top:20px;">
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sreedeep Reddy</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
