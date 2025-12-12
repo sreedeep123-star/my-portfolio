@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sreedeep Reddy — Portfolio</title>
-
-  <!-- Optional Google font (fallbacks included) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreedeep Reddy | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV (Centered glass navbar) -->
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav-inner">
       <div class="nav-center">
         <a class="brand" href="index.html">Sreedeep Reddy</a>
-        <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#contact">Contact</a>
-          <a class="nav-link resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <nav id="primaryNav" class="primary-nav">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="resume.pdf" target="_blank" class="nav-link resume">Resume</a>
         </nav>
       </div>
-
       <div class="nav-actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
-        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+        <button id="themeToggle" class="icon-btn">🌙</button>
+        <button id="menuToggle" class="icon-btn menu-btn">☰</button>
       </div>
     </div>
   </header>
@@ -40,51 +35,40 @@
         <div class="hero-card glass reveal">
           <h1 class="hero-title">Hi, I’m <span class="accent">Sreedeep Reddy</span></h1>
           <p class="hero-sub">Frontend Developer • ML Enthusiast — Hyderabad, Telangana</p>
-
           <div class="hero-actions">
             <a class="btn" href="#projects">View Projects</a>
             <a class="btn ghost" href="mailto:deeps510813@gmail.com">Contact</a>
           </div>
-
-          <ul class="social-inline" aria-hidden="false">
-            <li><a href="https://github.com/sreedeep123-star" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank" rel="noopener">LinkedIn</a></li>
+          <ul class="social-inline">
+            <li><a href="https://github.com/sreedeep123-star" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
-
         <div class="hero-image glass reveal">
-          <img src="train 2.gif" alt="Sreedeep Reddy — Profile photo">
+          <img src="profile.jpg" alt="Sreedeep Reddy">
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="glass info reveal">
-            <h2>About Me</h2>
-            <p>
-              I build modern, accessible, and responsive websites. I also work on machine learning projects
-              (data preprocessing, modeling, and deployment). I enjoy turning complex problems into simple,
-              usable interfaces.
-            </p>
-
-            <div class="info-list">
-              <div><strong>Location</strong><span>Hyderabad, Telangana</span></div>
-              <div><strong>Email</strong><span>deeps510813@gmail.com</span></div>
-              <div><strong>Role</strong><span>Frontend / ML</span></div>
-            </div>
+      <div class="container section-grid">
+        <div class="glass info reveal">
+          <h2>About Me</h2>
+          <p>I build modern, accessible, and responsive websites. I also work on machine learning projects and enjoy turning complex problems into simple, usable interfaces.</p>
+          <div class="info-list">
+            <div><strong>Location</strong><span>Hyderabad, Telangana</span></div>
+            <div><strong>Email</strong><span>deeps510813@gmail.com</span></div>
+            <div><strong>Role</strong><span>Frontend / ML</span></div>
           </div>
-
-          <div class="glass stats reveal">
-            <h3>Highlights</h3>
-            <ul>
-              <li>Heart disease prediction ML app (Streamlit)</li>
-              <li>Responsive e-commerce landing page</li>
-              <li>E-learning prototype with quizzes & tracking</li>
-            </ul>
-          </div>
+        </div>
+        <div class="glass stats reveal">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Heart disease prediction ML app</li>
+            <li>Responsive e-commerce website</li>
+            <li>E-learning prototype with quizzes & tracking</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -93,7 +77,6 @@
     <section id="skills" class="section">
       <div class="container">
         <h2 class="section-title reveal">Skills</h2>
-
         <div class="tags reveal">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
@@ -110,20 +93,17 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title reveal">Projects</h2>
-
         <div class="projects-grid">
           <a class="project glass reveal" href="heart-disease.html">
             <h3>❤️ Heart Disease Prediction</h3>
             <p>ML model + Streamlit UI predicting risk from clinical features.</p>
             <span class="pill">Python • Scikit-learn • Streamlit</span>
           </a>
-
           <a class="project glass reveal" href="ecommerce.html">
             <h3>🛒 E-Commerce Website</h3>
             <p>Responsive product pages, cart UX and clean UI templates.</p>
             <span class="pill">HTML • CSS • JS</span>
           </a>
-
           <a class="project glass reveal" href="elearning.html">
             <h3>📚 E-Learning Platform</h3>
             <p>Course listing, quizzes and student progress mockups.</p>
@@ -138,11 +118,11 @@
       <div class="container">
         <h2 class="section-title reveal">Contact</h2>
         <div class="glass contact-card reveal">
-          <p>If you’d like to work together or see my resume, contact me:</p>
+          <p>Reach me via email or download my resume:</p>
           <p class="large"><a href="mailto:deeps510813@gmail.com">deeps510813@gmail.com</a></p>
           <div class="footer-actions">
-            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-            <a class="btn ghost" href="https://github.com/sreedeep123-star" target="_blank" rel="noopener">View GitHub</a>
+            <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+            <a class="btn ghost" href="https://github.com/sreedeep123-star" target="_blank">View GitHub</a>
           </div>
         </div>
       </div>

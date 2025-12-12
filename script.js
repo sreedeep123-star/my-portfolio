@@ -1,54 +1,53 @@
-// script.js — theme + mobile menu + scroll reveal + year
+// ===== YEAR =====
+const yearEl = document.getElementById("year");
+if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Year
-const y = document.getElementById('year');
-if (y) y.textContent = new Date().getFullYear();
-
-// Theme toggle (persist in localStorage)
-const themeToggle = document.getElementById('themeToggle');
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById("themeToggle");
 const htmlEl = document.documentElement;
-const stored = localStorage.getItem('theme');
-if (stored === 'dark') htmlEl.classList.add('dark');
-else if (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  htmlEl.classList.add('dark');
+const storedTheme = localStorage.getItem("theme");
+if(storedTheme === "dark") htmlEl.classList.add("dark");
+else if(!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) htmlEl.classList.add("dark");
+
+function updateThemeIcon() {
+  themeToggle.textContent = htmlEl.classList.contains("dark") ? "☀️" : "🌙";
 }
-function updateThemeButton() {
-  if (!themeToggle) return;
-  themeToggle.textContent = htmlEl.classList.contains('dark') ? '☀️' : '🌙';
-}
-updateThemeButton();
-themeToggle && themeToggle.addEventListener('click', () => {
-  htmlEl.classList.toggle('dark');
-  localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
-  updateThemeButton();
+updateThemeIcon();
+themeToggle && themeToggle.addEventListener("click", () => {
+  htmlEl.classList.toggle("dark");
+  localStorage.setItem("theme", htmlEl.classList.contains("dark") ? "dark" : "light");
+  updateThemeIcon();
 });
 
-// Mobile menu toggle (minimal)
-const menuToggle = document.getElementById('menuToggle');
-const primaryNav = document.getElementById('primaryNav');
-menuToggle && menuToggle.addEventListener('click', () => {
-  primaryNav && primaryNav.classList.toggle('open');
+// ===== MOBILE MENU =====
+const menuToggle = document.getElementById("menuToggle");
+const primaryNav = document.getElementById("primaryNav");
+menuToggle && menuToggle.addEventListener("click", () => {
+  primaryNav && primaryNav.classList.toggle("open");
 });
-
-// Close nav when link clicked (mobile)
-document.querySelectorAll('.primary-nav a, .nav-link').forEach(a => {
-  a.addEventListener('click', () => {
-    if (primaryNav && primaryNav.classList.contains('open')) primaryNav.classList.remove('open');
+document.querySelectorAll('.primary-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(primaryNav.classList.contains("open")) primaryNav.classList.remove("open");
   });
 });
 
-// Scroll reveal using IntersectionObserver
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
+// ===== SCROLL REVEAL =====
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      // optionally unobserve to run only once
-      observer.unobserve(entry.target);
+    if(entry.isIntersecting){
+      entry.target.classList.add("revealed");
+      obs.unobserve(entry.target);
     }
   });
 }, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
 
-reveals.forEach(r => observer.observe(r));
-
-// Smooth internal link scrolling is handled by CSS `scroll-behavior: smooth`
+// ===== SMOOTH SCROLL FOR ANCHORS =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
