@@ -1,114 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreedeep Reddy | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreedeep Reddy | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-container">
-      <div class="hero-text">
-        <h1>Sreedeep Reddy</h1>
-        <p class="role">Web Developer | Hyderabad, Telangana</p>
-        <p class="tagline">I build modern and responsive websites that showcase my skills and projects.</p>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
-      <div class="hero-image">
-        <img src="train 2.gif" alt="Sreedeep Reddy">
-      </div>
-    </div>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h2 class="logo">Sreedeep Reddy</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- About Me Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Hello! I am <strong>Sreedeep Reddy</strong> from Hyderabad, Telangana. I am passionate about web development and creating user-friendly, responsive websites. I enjoy turning ideas into interactive projects.</p>
-    <div class="info-cards">
-      <div class="card">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Hyderabad, Telangana</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-envelope"></i>
-        <p>deeps510813@gmail.com</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-code"></i>
-        <p>Web Development</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">
-        <p>HTML</p>
-        <div class="progress">
-          <div class="progress-bar html"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Sreedeep Reddy</span></h1>
+            <p>A Passionate Developer from Hyderabad, Telangana</p>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
-      </div>
-      <div class="skill">
-        <p>CSS</p>
-        <div class="progress">
-          <div class="progress-bar css"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="progress">
-          <div class="progress-bar js"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>Responsive Design</p>
-        <div class="progress">
-          <div class="progress-bar responsive"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <img src="profile.jpg" class="profile-pic" alt="Profile Photo">
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A modern portfolio website built with HTML, CSS, and JS to showcase projects and skills.</p>
-      </div>
-      <div class="project-card">
-        <h3>JavaScript Calculator</h3>
-        <p>A simple calculator built with JS to demonstrate DOM manipulation and logic.</p>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page Design</h3>
-        <p>A responsive landing page with modern UI design and CSS animations.</p>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am an enthusiastic developer interested in web development, programming, 
+            and problem-solving.  
+            I enjoy creating clean and responsive websites using modern tools and technologies.
+        </p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me via email or connect on social media:</p>
-    <div class="contact-links">
-      <a href="mailto:deeps510813@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      <a href="https://github.com/sreedeep123-star" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Sreedeep Reddy. All rights reserved.</p>
-  </footer>
+        <div class="skills-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">C Language</div>
+            <div class="skill-item">Responsive Web Design</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Heart Disease Prediction</h3>
+                <p>
+                    A Machine Learning model that predicts the chances of heart disease 
+                    using key medical parameters. Built using Python, Pandas, NumPy 
+                    and classification algorithms.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>E-Commerce Website</h3>
+                <p>
+                    A fully functional online shopping website with product pages, 
+                    modern UI, and responsive layout developed using HTML and CSS.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>E-Learning Website</h3>
+                <p>
+                    A simple and user-friendly e-learning platform where users can 
+                    browse and access courses. Built using clean HTML and CSS.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <strong>deeps510813@gmail.com</strong></p>
+        <p>Location: Hyderabad, Telangana</p>
+
+        <div class="contact-links">
+            <a href="mailto:deeps510813@gmail.com" class="btn">Email Me</a>
+            <a href="https://github.com/sreedeep123-star" class="btn" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Sreedeep Reddy. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
