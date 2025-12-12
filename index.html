@@ -1,100 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreedeep Reddy | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sreedeep Reddy — Portfolio</title>
+
+  <!-- Fonts (system fallback used if blocked) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sreedeep Reddy</a>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-container">
-      <div class="hero-text">
-        <h1>Sreedeep Reddy</h1>
-        <p class="role">Web Developer | Hyderabad, Telangana</p>
-        <p class="tagline">I build modern and responsive websites that showcase my skills and projects.</p>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
-      <div class="hero-image">
-        <img src="train 2.gif" alt="Sreedeep Reddy">
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Hello! I am <strong>Sreedeep Reddy</strong> from Hyderabad, Telangana. I am passionate about web development and creating user-friendly, responsive websites. I enjoy turning ideas into interactive projects.</p>
-    <div class="info-cards">
-      <div class="card">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Hyderabad, Telangana</p>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card glass">
+          <h1 class="hero-title">Hi, I'm <span class="accent">Sreedeep Reddy</span></h1>
+          <p class="hero-sub">Frontend Developer • ML Enthusiast — Hyderabad, Telangana</p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="mailto:deeps510813@gmail.com">Contact</a>
+          </div>
+
+          <ul class="social-inline" aria-hidden="false">
+            <li><a href="https://github.com/sreedeep123-star" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-image glass">
+          <!-- Replace profile.jpg with your real picture -->
+          <img src="train 2.gif" alt="Sreedeep Reddy — Profile photo">
+        </div>
       </div>
-      <div class="card">
-        <i class="fa-solid fa-envelope"></i>
-        <p>deeps510813@gmail.com</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="glass info">
+            <h2>About Me</h2>
+            <p>
+              I build modern, accessible, and responsive websites. I also work on machine learning projects
+              (data preprocessing, modeling, and deployment). I enjoy turning complex problems into simple,
+              usable interfaces.
+            </p>
+
+            <div class="info-list">
+              <div><strong>Location</strong><span>Hyderabad, Telangana</span></div>
+              <div><strong>Email</strong><span>deeps510813@gmail.com</span></div>
+              <div><strong>Role</strong><span>Frontend / ML</span></div>
+            </div>
+          </div>
+
+          <div class="glass stats">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Heart disease prediction ML app (Streamlit)</li>
+              <li>Responsive e-commerce landing page</li>
+              <li>E-learning prototype with quizzes & tracking</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <i class="fa-solid fa-code"></i>
-        <p>Web Development</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Git & GitHub</span>
+          <span class="tag">Responsive Design</span>
+        </div>
       </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <a class="project glass" href="heart-disease.html">
+            <h3>❤️ Heart Disease Prediction</h3>
+            <p>ML model + Streamlit UI predicting risk from clinical features.</p>
+            <span class="pill">Python • Scikit-learn • Streamlit</span>
+          </a>
+
+          <a class="project glass" href="ecommerce.html">
+            <h3>🛒 E-Commerce Website</h3>
+            <p>Responsive product pages, cart UX and clean UI templates.</p>
+            <span class="pill">HTML • CSS • JS</span>
+          </a>
+
+          <a class="project glass" href="elearning.html">
+            <h3>📚 E-Learning Platform</h3>
+            <p>Course listing, quizzes and student progress mockups.</p>
+            <span class="pill">HTML • CSS • JS</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="glass contact-card">
+          <p>If you’d like to work together or see my resume, contact me:</p>
+          <p class="large"><a href="mailto:deeps510813@gmail.com">deeps510813@gmail.com</a></p>
+          <div class="footer-actions">
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+            <a class="btn ghost" href="https://github.com/sreedeep123-star" target="_blank" rel="noopener">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sreedeep Reddy — Built with care.</p>
     </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>Machine Learning</li>
-      <li>HTML & CSS</li>
-      <li>Java</li>
-      <li>Git & GitHub</li>
-      <li>SQL</li>
-    </ul>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-container">
-
-      <div class="project-card">
-        <h3>❤️ Heart Disease Prediction</h3>
-        <p>A machine learning model that predicts heart disease using real medical datasets. UI built using Streamlit.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>🛒 E-Commerce Website</h3>
-        <p>A functional online shopping website featuring login, product listings, a cart, and a responsive UI.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>🎓 E-Learning Platform</h3>
-        <p>An LMS platform with course modules, quizzes, dashboards, and student progress tracking.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me via email or connect on social media:</p>
-    <div class="contact-links">
-      <a href="mailto:deeps510813@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      <a href="https://github.com/sreedeep123-star" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/sreedeep-reddy" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Sreedeep Reddy. All rights reserved.</p>
   </footer>
 
+  <!-- Minimal JS: nav toggle + theme toggle + year -->
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    menuToggle && menuToggle.addEventListener('click', () => {
+      primaryNav.classList.toggle('open');
+    });
+
+    // theme toggle with persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const preferred = localStorage.getItem('theme');
+    if(preferred === 'dark') document.documentElement.classList.add('dark');
+    else if(!preferred && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+
+    function updateToggleText() {
+      const isDark = document.documentElement.classList.contains('dark');
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+    }
+    updateToggleText();
+
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleText();
+    });
+  </script>
 </body>
 </html>
