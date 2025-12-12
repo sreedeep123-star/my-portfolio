@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sreedeep Reddy — Portfolio</title>
 
-  <!-- Fonts (system fallback used if blocked) -->
+  <!-- Optional Google font (fallbacks included) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- NAV (Centered glass navbar) -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">Sreedeep Reddy</a>
-
-      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a class="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </nav>
+      <div class="nav-center">
+        <a class="brand" href="index.html">Sreedeep Reddy</a>
+        <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </div>
 
       <div class="nav-actions">
         <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
@@ -34,8 +37,8 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-card glass">
-          <h1 class="hero-title">Hi, I'm <span class="accent">Sreedeep Reddy</span></h1>
+        <div class="hero-card glass reveal">
+          <h1 class="hero-title">Hi, I’m <span class="accent">Sreedeep Reddy</span></h1>
           <p class="hero-sub">Frontend Developer • ML Enthusiast — Hyderabad, Telangana</p>
 
           <div class="hero-actions">
@@ -49,8 +52,7 @@
           </ul>
         </div>
 
-        <div class="hero-image glass">
-          <!-- Replace profile.jpg with your real picture -->
+        <div class="hero-image glass reveal">
           <img src="train 2.gif" alt="Sreedeep Reddy — Profile photo">
         </div>
       </div>
@@ -60,7 +62,7 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-grid">
-          <div class="glass info">
+          <div class="glass info reveal">
             <h2>About Me</h2>
             <p>
               I build modern, accessible, and responsive websites. I also work on machine learning projects
@@ -75,7 +77,7 @@
             </div>
           </div>
 
-          <div class="glass stats">
+          <div class="glass stats reveal">
             <h3>Highlights</h3>
             <ul>
               <li>Heart disease prediction ML app (Streamlit)</li>
@@ -90,9 +92,9 @@
     <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title reveal">Skills</h2>
 
-        <div class="tags">
+        <div class="tags reveal">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
           <span class="tag">JavaScript</span>
@@ -107,22 +109,22 @@
     <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title reveal">Projects</h2>
 
         <div class="projects-grid">
-          <a class="project glass" href="heart-disease.html">
+          <a class="project glass reveal" href="heart-disease.html">
             <h3>❤️ Heart Disease Prediction</h3>
             <p>ML model + Streamlit UI predicting risk from clinical features.</p>
             <span class="pill">Python • Scikit-learn • Streamlit</span>
           </a>
 
-          <a class="project glass" href="ecommerce.html">
+          <a class="project glass reveal" href="ecommerce.html">
             <h3>🛒 E-Commerce Website</h3>
             <p>Responsive product pages, cart UX and clean UI templates.</p>
             <span class="pill">HTML • CSS • JS</span>
           </a>
 
-          <a class="project glass" href="elearning.html">
+          <a class="project glass reveal" href="elearning.html">
             <h3>📚 E-Learning Platform</h3>
             <p>Course listing, quizzes and student progress mockups.</p>
             <span class="pill">HTML • CSS • JS</span>
@@ -134,8 +136,8 @@
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="glass contact-card">
+        <h2 class="section-title reveal">Contact</h2>
+        <div class="glass contact-card reveal">
           <p>If you’d like to work together or see my resume, contact me:</p>
           <p class="large"><a href="mailto:deeps510813@gmail.com">deeps510813@gmail.com</a></p>
           <div class="footer-actions">
@@ -153,38 +155,6 @@
     </div>
   </footer>
 
-  <!-- Minimal JS: nav toggle + theme toggle + year -->
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // mobile menu
-    const menuToggle = document.getElementById('menuToggle');
-    const primaryNav = document.getElementById('primaryNav');
-    menuToggle && menuToggle.addEventListener('click', () => {
-      primaryNav.classList.toggle('open');
-    });
-
-    // theme toggle with persistence
-    const themeToggle = document.getElementById('themeToggle');
-    const preferred = localStorage.getItem('theme');
-    if(preferred === 'dark') document.documentElement.classList.add('dark');
-    else if(!preferred && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark');
-    }
-
-    function updateToggleText() {
-      const isDark = document.documentElement.classList.contains('dark');
-      themeToggle.textContent = isDark ? '☀️' : '🌙';
-    }
-    updateToggleText();
-
-    themeToggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      updateToggleText();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
