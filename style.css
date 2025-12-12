@@ -1,16 +1,9 @@
+/* Global */
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     color: #222;
-}
-
-header {
-    background: #222;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
 }
 
 h2 {
@@ -23,30 +16,98 @@ section {
     width: 85%;
     max-width: 900px;
     margin: 30px auto;
+    background: #fff;
     padding: 20px;
-    background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* HERO SECTION */
+.hero {
+    background: #111;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero .highlight {
+    color: #ffdd57;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.location {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn, .btn-outline {
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn {
+    background: #ffdd57;
+    color: #222;
+}
+
+.btn-outline {
+    border: 2px solid #ffdd57;
+    color: #ffdd57;
+}
+
+/* SKILLS */
 .skills ul {
     list-style: square;
     padding-left: 20px;
 }
 
+/* PROJECTS */
 .project-card {
-    background: #ffffff;
+    background: #fff;
     padding: 15px;
     margin-top: 15px;
     border-left: 4px solid #222;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.07);
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
 }
 
+/* SOCIAL SECTION */
+.social {
+    text-align: center;
+}
+
+.social-links a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+    border: 2px solid #222;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
+    background: #111;
+    color: #fff;
     padding: 15px;
-    background: #222;
-    color: white;
     margin-top: 40px;
 }
